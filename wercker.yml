@@ -1,0 +1,37 @@
+box: java
+# Build definition
+build:
+  # The steps that will be executed on build
+  steps:
+    - script:
+        name: show base information
+        code: |
+          ./gradlew -v
+          javac -version
+          export
+    - install-packages:
+        packages: npm
+    - script:
+        name: install node
+        code: |
+          npm cache clean -f
+          npm install -g n
+          n latest
+    - script:
+            name: run tests
+            code: |
+              ./gradlew --full-stacktrace -q --project-cache-dir=$WERCKER_CACHE_DIR test
+    - script:
+            name: run build
+            code: |
+              ./gradlew --full-stacktrace -q --project-cache-dir=$WERCKER_CACHE_DIR build
+
+deploy:
+  steps:
+    - dlapiduz/cloud-foundry-deploy:
+      api: $CF_API # Set as environment variables
+      username: $CF_USER
+      password: $CF_PASS
+      organization: $CF_ORG
+      space: $CF_SPACE
+      appname: isitup
