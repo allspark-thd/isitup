@@ -1,10 +1,11 @@
 import {bootstrap} from 'angular2/platform/browser';
 import {App} from './app/app.component';
+import {Http, Response, RequestOptions, Headers, Request, RequestMethod, HTTP_PROVIDERS} from 'angular2/http';
 
 
 // Angular 2
 export function main() {
-  return bootstrap(App, []);
+  return bootstrap(App, [HTTP_PROVIDERS]);
 }
 
 
