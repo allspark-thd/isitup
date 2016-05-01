@@ -35,7 +35,6 @@ public class RepositoryTests {
     public void savesAppTarget() {
         AppTarget appTarget = new AppTarget("app", "panic", false);
         AppTarget target = repository.save(appTarget);
-        assertEquals(target.getId(), 1);
         assertEquals(target.getAppName(), "app");
     }
 
