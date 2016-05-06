@@ -1,0 +1,15 @@
+#spring.datasource.url= jdbc:postgresql://localhost:5432/springbootdb
+#spring.datasource.username=postgres
+#spring.datasource.password=postgres@123
+#
+#spring.jpa.hibernate.ddl-auto=create-drop
+#validate instead of create-drop
+
+security:
+  oauth2:
+    client:
+      tokenName: oauth_token
+      authenticationScheme: query
+      clientAuthenticationScheme: form
+    resource:
+      userInfoUri: https://graph.facebook.com/me
