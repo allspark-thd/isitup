@@ -9,6 +9,8 @@ build:
           ./gradlew -v
           javac -version
           export
+          sudo apt-get update -y -qq
+          sudo apt-get upgrade -y -qq
     - install-packages:
         packages: npm
     - script:

@@ -8,7 +8,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import java.util.List;
 
 @RepositoryRestResource(collectionResourceRel = "app", path = "app")
-public interface AppRepository extends PagingAndSortingRepository<AppTarget, Long> {
+public interface AppRepository extends PagingAndSortingRepository<AppTarget, String> {
 
     List<AppTarget> findByAppName(@Param("name") String name);
 

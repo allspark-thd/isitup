@@ -40,7 +40,7 @@ dependencies {
     compile('com.fasterxml.jackson.core:jackson-databind:2.7.3')
 	compile("org.springframework.boot:spring-boot-starter-websocket")
 	compile("org.springframework:spring-messaging")
-//	compile('postgresql:postgresql:9.1-901-1.jdbc4')
+	compile('postgresql:postgresql:9.1-901-1.jdbc4')
 	testCompile('org.springframework.boot:spring-boot-starter-test') 
 }
 

@@ -4,6 +4,7 @@
 node_modules
 scratch
 typings
+src/main/script/coverage/
 *.log
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
