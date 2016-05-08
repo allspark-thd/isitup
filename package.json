@@ -84,7 +84,7 @@
     "html-loader": "^0.4.3",
     "ie-shim": "^0.1.0",
     "jasmine-core": "^2.3.4",
-    "karma-chrome-launcher": "^0.2.2",
+    "karma-chrome-launcher": "^1.0.1",
     "karma-coverage": "^0.5.5",
     "karma-firefox-launcher": "^0.1.6",
     "karma-junit-reporter": "^0.4.0",
