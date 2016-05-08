@@ -9,16 +9,12 @@ build:
           ./gradlew -v
           javac -version
           export
-          sudo apt-get update -y -qq
-          sudo apt-get upgrade -y -qq
     - install-packages:
-        packages: npm
+        packages: make
     - script:
         name: install node
         code: |
-          npm cache clean -f
-          npm install -g n
-          n latest
+          curl -sL http://git.io/n-install | bash -s -- -q
     - script:
             name: run tests
             code: |
