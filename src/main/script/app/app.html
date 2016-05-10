@@ -1,0 +1,15 @@
+<form name="form" (submit)="set($event)" role="form">
+    <div class="form-group">
+        <label for="appName">Username</label>
+        <input type="text" name="appName" id="appName" class="form-control" [(ngModel)]="appName" required/>
+    </div>
+    <div class="form-group">
+        <label for="message">Value</label>
+        <input type="message" name="message" id="message" class="form-control" [(ngModel)]="message" required/>
+    </div>
+    <div class="form-actions">
+        <button type="set" ng-disabled="form.$invalid" class="btn btn-danger">Set</button>
+        <button type="clear" ng-disabled="form.$invalid" class="btn btn-danger">Clear</button>
+        <button type="get" ng-disabled="form.$invalid" class="btn btn-danger">Get</button>
+    </div>
+</form>

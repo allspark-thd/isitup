@@ -16,3 +16,8 @@ import '@angular/router';
 // RxJS
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';
+
+
+// Uncaught reflect-metadata shim is required when using class decorators
+import 'zone.js';
+import 'reflect-metadata';

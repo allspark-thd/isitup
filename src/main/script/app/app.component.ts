@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 
 import {AppState} from './app_state.service.ts';
+import {StatusService} from './status.service.ts';
 
 @Component({
 	selector: 'app',
@@ -8,15 +9,43 @@ import {AppState} from './app_state.service.ts';
 	providers: [],
 	directives: [],
 	styles: [],
-	template: `<div>Hello World</div>`
+	template: 'app/app.html'
 })
 export class App {
-	onLoadWelcomeMessage: string = `Hello ngConf! I'm logging on ngOnInit()`;
-	name: string = 'Angular2 Webpack Lite';
-
-	constructor(public appState: AppState) {}
+	onLoadWelcomeMessage: string = `Is It Up?`;
 
 	ngOnInit() {
 		console.log(this.onLoadWelcomeMessage, `App state is ${this.appState.state}`);
 	}
+
+    constructor(public statusService:StatusService, public appState: AppState) {
+
+    }
+    
+    check() {
+        this.statusService.getStatus("appName")
+            .subscribe(
+                res => console.log(res),
+                err => console.log(err)
+            );
+    }
+
+
+    clear() {
+        this.statusService.setStatus("appName", "message")
+            .subscribe(
+                res => console.log(res),
+                err => console.log(err)
+            );
+    }
+
+
+    set() {
+        this.statusService.clearStatus("appName")
+            .subscribe(
+                res => console.log(res),
+                err => console.log(err)
+            );
+    }
+
 }
