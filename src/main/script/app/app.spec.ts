@@ -11,6 +11,7 @@ describe('App Component', () => {
     describe('something', () => {
         describe('success', () => {
             it('should return a result from the promise', () => {
+                //noinspection TypeScriptUnresolvedFunction
                 expect(1).toEqual(1);
             });
         });
