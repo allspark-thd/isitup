@@ -1,9 +1,10 @@
 import {provide, PLATFORM_DIRECTIVES, PLATFORM_PIPES} from '@angular/core';
 import {ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from '@angular/router';
 import {FORM_PROVIDERS} from '@angular/common';
-import {HTTP_PROVIDERS, JSONP_PROVIDERS} from '@angular/http';
+import {HTTP_PROVIDERS, Http, JSONP_PROVIDERS} from '@angular/http';
 import {ELEMENT_PROBE_PROVIDERS /*,ELEMENT_PROBE_PROVIDERS_PROD_MODE*/} from '@angular/platform-browser';
 import {LocationStrategy, HashLocationStrategy, Location} from '@angular/common';
+import {APP_PROVIDERS} from '../../app'
 
 
 /*
@@ -21,7 +22,7 @@ export const NG_APPLICATION_PROVIDERS = [
   ...HTTP_PROVIDERS,
   ...JSONP_PROVIDERS,
   ...ROUTER_PROVIDERS,
-  provide(LocationStrategy, { useClass: HashLocationStrategy })
+    provide(LocationStrategy, { useClass: HashLocationStrategy })
 ];
 
 /*
@@ -30,6 +31,11 @@ export const NG_APPLICATION_PROVIDERS = [
 export const APPLICATION_PIPES = [
 
 ];
+
+
+export const APPLICATION_PROVIDERS = [
+    ...APP_PROVIDERS
+]
 
 /*
   Add your custom directives here to be use anywhere.
@@ -44,10 +50,10 @@ export const APPLICATION_DIRECTIVES = [
 */
 export const ENV_PROVIDERS = [
   ...ENVIRONMENT_PROVIDERS
-]
+];
 
 export const PROVIDERS = [
-  ...NG_APPLICATION_PROVIDERS
+    provide(NG_APPLICATION_PROVIDERS, { multi: true, useValue: APPLICATION_PROVIDERS })
 ];
 
 export const PIPES = [

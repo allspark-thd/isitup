@@ -16,6 +16,7 @@
     "./src/main/script/**/*.ts",
     "./src/test/script/**/*.ts",
     "!./node_modules/**/*.ts",
+    "!./node_modules/**/*.d.ts",
     "src/custom-typings.d.ts",
     "typings/browser.d.ts"
   ],

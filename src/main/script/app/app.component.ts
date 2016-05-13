@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-
 import {AppState} from './app_state.service.ts';
 import {StatusService} from './status.service.ts';
 

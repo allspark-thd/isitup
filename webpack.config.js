@@ -67,7 +67,7 @@ module.exports = {
   },
   plugins: [
     new ForkCheckerPlugin(),
-    new webpack.optimize.OccurenceOrderPlugin(true),
+    new webpack.optimize.OccurenceOrderPlugin(false),
     // new webpack.optimize.CommonsChunkPlugin({
     //   name: 'vendor'
     // }),
