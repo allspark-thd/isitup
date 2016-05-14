@@ -1,0 +1,29 @@
+<md-card>
+    <md-card-content>
+        <span x-large>Managing to Keep It Up?</span>
+        <form name="form" (submit)="set($event)" role="form">
+            <md-card>
+                <div class="form-group">
+                    <md-input placeholder="Application" type="text" name="appName" id="appName" class="form-control"
+                              [(ngModel)]="appName" required>
+                        <md-hint align="end">Name of Application</md-hint>
+                    </md-input>
+                </div>
+                <div class="form-group">
+                    <md-input placeholder="Notification" type="text" name="message" id="message"
+                              class="form-control"
+                              [(ngModel)]="message" required>
+                        <md-hint align="end">Notification for Users</md-hint>
+                    </md-input>
+                </div>
+            </md-card>
+            <md-card>
+                <div class="form-actions">
+                    <button md-raised-button color="primary" type="set" ng-disabled="form.$invalid">Set</button>
+                    <button md-raised-button color="accent" type="clear" ng-disabled="form.$invalid">Clear</button>
+                    <button md-raised-button color="warn" type="get" ng-disabled="form.$invalid">Get</button>
+                </div>
+            </md-card>
+        </form>
+    </md-card-content>
+</md-card>
