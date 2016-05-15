@@ -1,5 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### Java template
+src/main/resources/static/index.html
+src/main/resources/static/main.bundle.js
+src/main/resources/static/vendor.bundle.js
 *.class
 node_modules
 scratch
