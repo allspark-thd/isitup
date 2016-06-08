@@ -20,10 +20,10 @@
             </md-card>
             <md-card>
                 <div flex class="form-actions">
-                    <button md-raised-button color="primary" type="set" ng-disabled="form.$invalid">Set</button>
-                    <button md-raised-button color="accent" type="clear" ng-disabled="form.$invalid">Clear
+                    <button md-raised-button color="primary" type="set" (click)="set($event)" ng-disabled="form.$invalid">Set</button>
+                    <button md-raised-button color="accent" type="clear" (click)="clear($event)" ng-disabled="form.$invalid">Clear
                     </button>
-                    <button md-raised-button color="warn" type="get" ng-disabled="form.$invalid">Get</button>
+                    <button md-raised-button color="warn" type="get" (click)="get($event)" ng-disabled="form.$invalid">Get</button>
                 </div>
             </md-card>
         </form>

@@ -14,6 +14,8 @@ import {StatusService} from './status.service.ts';
 })
 export class App {
     onLoadWelcomeMessage:string = `Is It Up?`;
+    appName:string;
+    message:string;
 
     ngOnInit() {
         console.log(this.onLoadWelcomeMessage, `App state is ${this.appState.state}`);
@@ -23,7 +25,7 @@ export class App {
 
     }
 
-    check() {
+    get() {
         this.statusService.getStatus("appName")
             .subscribe(
                 res => console.log(res),
@@ -33,16 +35,16 @@ export class App {
 
 
     clear() {
-        this.statusService.setStatus("appName", "message")
+        this.statusService.clearStatus("appName")
             .subscribe(
                 res => console.log(res),
                 err => console.log(err)
             );
     }
 
-
-    set() {
-        this.statusService.clearStatus("appName")
+    set(event) {
+        debugger;
+        this.statusService.setStatus(this.appName, this.message)
             .subscribe(
                 res => console.log(res),
                 err => console.log(err)
