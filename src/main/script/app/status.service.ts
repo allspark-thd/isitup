@@ -8,16 +8,11 @@ export class StatusService {
     headers:Headers;
     options:RequestOptions;
 
-
-
+    
     constructor(public http:Http) {
         this.headers = new Headers({'content-type':'application/json'});
         this.options = new RequestOptions({headers:this.headers});
     }
-
-
-
-
 
     setStatus(appName, downMessage) {
         debugger;

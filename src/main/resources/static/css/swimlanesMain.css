@@ -1,0 +1,122 @@
+#nav div {
+	display: inline-block;
+	margin: 3px;
+}
+
+#nav label {
+	display: inline;
+	text-align: center;
+	width: 85px;
+}
+
+#nav input[type=radio] {
+	display: none;
+	margin: 10px;
+}
+
+#nav input[type=radio]+label {
+	border-radius: 8px;
+	display: inline-block;
+	padding: 4px 12px;
+	color: #333;
+	border: solid 1px #b7b7b7;
+	background: #fff;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#ededed));
+	/* Safari 5.1, Chrome 10+ */
+	background: -webkit-linear-gradient(top, #ffffff, #ededed);
+	background: -moz-linear-gradient(top, #fff, #ededed);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');
+	position: relative;
+}
+
+#nav input[type=radio]:checked+label, #nav input[type=radio]+label:hover {
+	color: white;
+	background: #f47c20;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+	background: -moz-linear-gradient(top, #f88e11, #f06015);
+	position: relative;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+}
+
+.hide {
+	display: none;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	background: white;
+	width: 92.072%;
+}
+
+.fixed {
+	position: fixed;
+}
+
+.lane {
+	display: inline-block;
+	vertical-align: top;
+	height: 100%;
+	padding: 0 .7%;
+	overflow: hidden;
+}
+
+.lane h1 {
+	margin: 10px;
+	padding: 0 15px;
+}
+
+.lane h1:first-letter {
+	text-transform: uppercase;
+}
+
+.lane ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.lane li {
+	margin: 10px 0;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+	border-radius: 4px;
+	padding: 10px;
+	background: lightyellow;
+	overflow: hidden;
+}
+
+.labels li {
+	display: inline-block;
+	margin: 0 2px;
+	border-radius: 20px;
+	padding: 2px 6px;
+	background-color: #588A00;
+	color: #fff;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	font-size: 85%;
+}
+
+.commaList {
+	display: inline;
+	list-style: none;
+}
+
+.commaList li {
+	display: inline;
+	box-shadow: none;
+	padding: 0;
+}
+
+.commaList li:after {
+	content: ", ";
+}
+
+.commaList li:first-child:before {
+	content: "(";
+}
+
+.commaList li:last-child:after {
+	content: ")";
+}

@@ -1,0 +1,84 @@
+{
+    "BatchStarted": true,
+    "jobDetails": [
+        {
+            "comments": "NA",
+            "jobEndTime": "2015-12-17 17:25:14.489",
+            "jobId": "179A14AC1450391105552",
+            "jobName": "Common Code",
+            "jobStartTime": "2015-12-17 17:25:05.552",
+            "jobStatus": "Done",
+            "logFileLink": "C:testJobLog_1.txt",
+            "reprocessErrorCount": "0",
+            "serialNo": 1,
+            "sterlingTableCount": "0",
+            "validationStatus": "Completed"
+        },
+        {
+            "comments": "NA",
+            "jobEndTime": "2015-12-17 17:27:08.955",
+            "jobId": "179A14AC1450391135641",
+            "jobName": "Service Skill",
+            "jobStartTime": "2015-12-17 17:25:35.641",
+            "jobStatus": "Done",
+            "logFileLink": "C:testJobLog_2.txt",
+            "reprocessErrorCount": "0",
+            "serialNo": 2,
+            "sterlingTableCount": "0",
+            "validationStatus": "Completed"
+        },
+        {
+            "comments": "NA",
+            "jobEndTime": "2015-12-17 17:29:41.850",
+            "jobId": "179A14AC1450391231739",
+            "jobName": "Service Types",
+            "jobStartTime": "2015-12-17 17:27:11.739",
+            "jobStatus": "Done",
+            "logFileLink": "C:testJobLog_3.txt",
+            "reprocessErrorCount": "0",
+            "serialNo": 3,
+            "sterlingTableCount": "0",
+            "validationStatus": "Completed"
+        },
+        {
+            "comments": "NA",
+            "jobEndTime": "2015-12-17 18:58:02.292",
+            "jobId": "179A14AC1450391411781",
+            "jobName": "Carrier Types",
+            "jobStartTime": "2015-12-17 17:30:11.781",
+            "jobStatus": "Done",
+            "logFileLink": "C:testJobLog_4.txt",
+            "reprocessErrorCount": "0",
+            "serialNo": 4,
+            "sterlingTableCount": "0",
+            "validationStatus": "Completed"
+        },
+        {
+            "comments": "NA",
+            "jobEndTime": "NA",
+            "jobId": "NA",
+            "jobName": "Resource Pool",
+            "jobStartTime": "NA",
+            "jobStatus": "Queued",
+            "logFileLink": "NA",
+            "reprocessErrorCount": "NA",
+            "serialNo": 5,
+            "sterlingTableCount": "NA",
+            "validationStatus": "NotStarted"
+        },
+        {
+            "comments": "NA",
+            "jobEndTime": "NA",
+            "jobId": "NA",
+            "jobName": "Node Notification",
+            "jobStartTime": "NA",
+            "jobStatus": "Queued",
+            "logFileLink": "NA",
+            "reprocessErrorCount": "NA",
+            "serialNo": 6,
+            "sterlingTableCount": "NA",
+            "validationStatus": "NotStarted"
+        }
+    ],
+    "triggerBatch": true
+}
