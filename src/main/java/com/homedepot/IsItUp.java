@@ -5,11 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.AuthoritiesExtractor;
-import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
-import org.springframework.boot.context.embedded.ErrorPage;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -20,8 +16,6 @@ import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.security.web.csrf.CsrfTokenRepository;
 import org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.filter.OncePerRequestFilter;
 import org.springframework.web.util.WebUtils;
 
@@ -32,7 +26,6 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.security.Principal;
 import java.util.List;
 import java.util.Map;
 
@@ -52,31 +45,25 @@ public class IsItUp extends WebSecurityConfigurerAdapter {
                     .anyMatch(org -> "allspark-thd".equals(org.get("login")))) {
                 return AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_USER");
             }
-            throw new BadCredentialsException("Not in allspark team");
+            throw new BadCredentialsException("Not in allspark team ");
         };
     }
 
-    @RequestMapping("/user")
-    @ResponseBody
-    public Principal user(Principal principal) {
-        return principal;
-    }
-
-    @RequestMapping("/unauthenticated")
-    public String unauthenticated() {
-        return "redirect:/?error=true";
-    }
-
-    @Configuration
-    protected static class ServletCustomizer {
-        @Bean
-        public EmbeddedServletContainerCustomizer customizer() {
-            return container -> {
-                container.addErrorPages(
-                        new ErrorPage(HttpStatus.UNAUTHORIZED, "/unauthenticated"));
-            };
-        }
-    }
+//    @RequestMapping("/unauthenticated")
+//    public String unauthenticated() {
+//        return "/error.html";
+//    }
+//
+//    @Configuration
+//    protected static class ServletCustomizer {
+//        @Bean
+//        public EmbeddedServletContainerCustomizer customizer() {
+//            return container -> {
+//                container.addErrorPages(
+//                        new ErrorPage(HttpStatus.UNAUTHORIZED, "/unauthenticated"));
+//            };
+//        }
+//    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {

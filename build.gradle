@@ -4,8 +4,6 @@ buildscript {
 	}
 	repositories {
 		mavenCentral()
-		maven { url "https://repo.spring.io/snapshot" }
-		maven { url "https://repo.spring.io/milestone" }
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}") 
@@ -26,8 +24,6 @@ targetCompatibility = 1.8
 
 repositories {
 	mavenCentral()
-	maven { url "https://repo.spring.io/snapshot" }
-	maven { url "https://repo.spring.io/milestone" }
 }
 
 
@@ -35,14 +31,14 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-actuator')
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	compile('org.springframework.boot:spring-boot-starter-data-rest')
-	compile('org.springframework.security.oauth:spring-security-oauth2:2.0.10.RELEASE')
+    compile('org.springframework.security.oauth:spring-security-oauth2:2.0.10.RELEASE')
 	compile("com.h2database:h2")
 	compile('postgresql:postgresql:9.1-901-1.jdbc4')
-	testCompile('org.springframework.boot:spring-boot-starter-test') 
+    testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
 // postgres - postgres -D /usr/local/var/postgres
 
 task wrapper(type: Wrapper) {
-	gradleVersion = '2.12'
+	gradleVersion = '2.13'
 }
