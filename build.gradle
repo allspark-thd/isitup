@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '1.4.0.M2'
+		springBootVersion = '1.4.0.M3'
 	}
 	repositories {
 		mavenCentral()
@@ -18,8 +18,9 @@ apply plugin: 'spring-boot'
 
 jar {
 	baseName = 'isitup'
-	version = '0.0.1-SNAPSHOT'
+	version = '0.0.1'
 }
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -34,7 +35,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-actuator')
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	compile('org.springframework.boot:spring-boot-starter-data-rest')
-	compile('org.springframework.security.oauth:spring-security-oauth2:2.0.9.RELEASE')
+	compile('org.springframework.security.oauth:spring-security-oauth2:2.0.10.RELEASE')
 	compile("com.h2database:h2")
     compile('com.jayway.jsonpath:json-path:2.2.0')
     compile('com.fasterxml.jackson.core:jackson-databind:2.7.3')
