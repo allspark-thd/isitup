@@ -3,15 +3,26 @@
 security:
   oauth2:
     client:
-      clientId: 972060436235077
-      clientSecret: e838a112e1cd5dba4b6dd9f4a074ebcc
-      accessTokenUri: https://graph.facebook.com/oauth/access_token
-      userAuthorizationUri: https://www.facebook.com/dialog/oauth
-      tokenName: oauth_token
-      authenticationScheme: query
+      clientId: 92593a847004026d65ff
+      clientSecret: c9e1750c7b134309d10ebaca28a05fa7bb2f50c7
+      accessTokenUri: https://github.com/login/oauth/access_token
+      userAuthorizationUri: https://github.com/login/oauth/authorize
       clientAuthenticationScheme: form
     resource:
-      userInfoUri: https://graph.facebook.com/me
+      userInfoUri: https://api.github.com/user
+
+#facebook:
+#  client:
+#      clientId: 972060436235077
+#      clientSecret: e838a112e1cd5dba4b6dd9f4a074ebcc
+#      accessTokenUri: https://graph.facebook.com/oauth/access_token
+#      userAuthorizationUri: https://www.facebook.com/dialog/oauth
+#      tokenName: oauth_token
+#      authenticationScheme: query
+#      clientAuthenticationScheme: form
+#  resource:
+#    userInfoUri: https://graph.facebook.com/me
+
 ---
 spring:
   profiles: cloud
