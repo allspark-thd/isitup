@@ -78,7 +78,7 @@
     "sinon-chai": "^2.8.0",
     "source-map-loader": "^0.1.5",
     "style-loader": "^0.13.1",
-    "ts-helpers": "1.1.1",
+    "ts-helpers": "1.1.2",
     "ts-node": "^0.7.3",
     "tslint": "^3.10.2",
     "tslint-loader": "^2.1.4",
